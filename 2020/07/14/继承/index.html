@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="First bolg," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,17 +79,16 @@
 
 
 
-<meta name="description" content="这是周泽康的第一条博客">
+<meta name="description" content="继承方法覆盖通过子类对象实例化父类对象时，调用同名方法时会因为同名覆盖的原因执行子类方法 super  子类调用父类同名方法 子类实现父类构造函数  1234567891011public class Animal&amp;#123;    public void eat()&amp;#123;        System.out.println(&quot;This is father&quot;);    &amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="blog">
-<meta property="og:url" content="http://yoursite.com/2020/07/10/blog/index.html">
+<meta property="og:title" content="继承">
+<meta property="og:url" content="http://yoursite.com/2020/07/14/%E7%BB%A7%E6%89%BF/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="这是周泽康的第一条博客">
+<meta property="og:description" content="继承方法覆盖通过子类对象实例化父类对象时，调用同名方法时会因为同名覆盖的原因执行子类方法 super  子类调用父类同名方法 子类实现父类构造函数  1234567891011public class Animal&amp;#123;    public void eat()&amp;#123;        System.out.println(&quot;This is father&quot;);    &amp;">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-10T13:02:36.000Z">
-<meta property="article:modified_time" content="2020-07-10T13:04:25.284Z">
+<meta property="article:published_time" content="2020-07-14T02:54:34.879Z">
+<meta property="article:modified_time" content="2020-07-14T02:54:48.445Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="First bolg">
 <meta name="twitter:card" content="summary">
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/07/10/blog/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/07/14/继承/"/>
 
 
 
 
 
-  <title>blog | Hexo</title>
+  <title>继承 | Hexo</title>
   
 
 
@@ -233,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/10/blog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/%E7%BB%A7%E6%89%BF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -250,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">blog</h1>
+          <h1 class="post-title" itemprop="name headline">继承</h1>
         
 
         <div class="post-meta">
@@ -262,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-10T21:02:36+08:00">
-                2020-07-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-14T10:54:34+08:00">
+                2020-07-14
               </time>
             
 
@@ -300,7 +299,23 @@
       
 
       
-        <p>这是周泽康的第一条博客</p>
+        <h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p><strong>方法覆盖</strong><br>通过子类对象实例化父类对象时，调用同名方法时会因为同名覆盖的原因执行子类方法</p>
+<p><strong>super</strong></p>
+<ul>
+<li>子类调用父类同名方法</li>
+<li>子类实现父类构造函数</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class Animal&#123;</span><br><span class="line">    public void eat()&#123;</span><br><span class="line">        System.out.println(&quot;This is father&quot;);</span><br><span class="line">    &#123;</span><br><span class="line">&#123;</span><br><span class="line">public class Dog extends Animal&#123;</span><br><span class="line">    public void eat()&#123;</span><br><span class="line">        super.eat();         &#x2F;&#x2F;会调用其父类的eat方法</span><br><span class="line">        System.out.println(&quot;This is son&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class File &#123;</span><br><span class="line">    private String filepath;</span><br><span class="line">    public File(String filepath)</span><br><span class="line">    &#123;</span><br><span class="line">        this.filepath&#x3D;filepath;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class JavaFile extends File &#123;</span><br><span class="line">    private String Package;</span><br><span class="line">    public JavaFile(String filepath,String Package)</span><br><span class="line">    &#123;</span><br><span class="line">        super(filepath);            &#x2F;&#x2F;必须写在第一行</span><br><span class="line">        this.Package&#x3D;Package;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>当父类只有一个有参数的构造函数的时候，子类也必须要具备这个构造函数，或者调用 super 方法为父类构造函数提供参数来实现新的构造函数</li>
+</ul>
+</blockquote>
+<ul>
+<li>构造函数里super方法必须写在第一行</li>
+</ul>
 
       
     </div>
@@ -316,12 +331,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/First-bolg/" rel="tag"># First bolg</a>
-          
-        </div>
-      
 
       
       
@@ -331,14 +340,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2020/07/10/blog/" rel="next" title="blog">
+                <i class="fa fa-chevron-left"></i> blog
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/07/14/%E7%BB%A7%E6%89%BF/" rel="prev" title="继承">
-                继承 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/07/14/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="prev" title="Java面向对象">
+                Java面向对象 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -391,8 +404,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -443,6 +465,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#继承"><span class="nav-number">1.</span> <span class="nav-text">继承</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

@@ -229,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/12/Java%20OOD%201/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/07/12/Java%20OOD%201/" itemprop="url">Java OOD 1</a></h1>
+                <a class="post-title-link" href="/2020/07/14/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" itemprop="url">Java面向对象</a></h1>
         
 
         <div class="post-meta">
@@ -260,8 +260,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-12T22:10:25+08:00">
-                2020-07-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-14T10:54:58+08:00">
+                2020-07-14
               </time>
             
 
@@ -300,7 +300,7 @@
       
         
           
-            <h2 id="Java面向对象"><a href="#Java面向对象" class="headerlink" title="Java面向对象"></a>Java面向对象</h2><hr>
+            <h1 id="Java面向对象"><a href="#Java面向对象" class="headerlink" title="Java面向对象"></a>Java面向对象</h1><hr>
 <p><strong>主键</strong><br><em>即主关键字，是被挑选出来作为表的行的唯一标识的候选关键字，他可以唯一确定表中的一行数据。</em>        </p>
 <p>类的ID主键</p>
 <blockquote>
@@ -333,6 +333,142 @@
 <p>static的执行顺序是按照代码行数的顺序来执行的，所以要先声明static变量后再创建static代码块</p>
 </blockquote>
 <p>在UML图中常量表示为带下划线<br><img src="https://style.youkeda.com/img/ham/course/j2/userservice1.svg" alt="常量"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/%E7%BB%A7%E6%89%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/14/%E7%BB%A7%E6%89%BF/" itemprop="url">继承</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-14T10:54:34+08:00">
+                2020-07-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p><strong>方法覆盖</strong><br>通过子类对象实例化父类对象时，调用同名方法时会因为同名覆盖的原因执行子类方法</p>
+<p><strong>super</strong></p>
+<ul>
+<li>子类调用父类同名方法</li>
+<li>子类实现父类构造函数</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class Animal&#123;</span><br><span class="line">    public void eat()&#123;</span><br><span class="line">        System.out.println(&quot;This is father&quot;);</span><br><span class="line">    &#123;</span><br><span class="line">&#123;</span><br><span class="line">public class Dog extends Animal&#123;</span><br><span class="line">    public void eat()&#123;</span><br><span class="line">        super.eat();         &#x2F;&#x2F;会调用其父类的eat方法</span><br><span class="line">        System.out.println(&quot;This is son&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class File &#123;</span><br><span class="line">    private String filepath;</span><br><span class="line">    public File(String filepath)</span><br><span class="line">    &#123;</span><br><span class="line">        this.filepath&#x3D;filepath;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class JavaFile extends File &#123;</span><br><span class="line">    private String Package;</span><br><span class="line">    public JavaFile(String filepath,String Package)</span><br><span class="line">    &#123;</span><br><span class="line">        super(filepath);            &#x2F;&#x2F;必须写在第一行</span><br><span class="line">        this.Package&#x3D;Package;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>当父类只有一个有参数的构造函数的时候，子类也必须要具备这个构造函数，或者调用 super 方法为父类构造函数提供参数来实现新的构造函数</li>
+</ul>
+</blockquote>
+<ul>
+<li>构造函数里super方法必须写在第一行</li>
+</ul>
 
           
         
@@ -534,7 +670,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
