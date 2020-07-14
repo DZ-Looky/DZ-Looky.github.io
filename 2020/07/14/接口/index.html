@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="继承方法覆盖通过子类对象实例化父类对象时，调用同名方法时会因为同名覆盖的原因执行子类方法 super  子类调用父类同名方法 子类实现父类构造函数  1234567891011public class Animal&amp;#123;    public void eat()&amp;#123;        System.out.println(&quot;This is father&quot;);    &amp;">
+<meta name="description" content="接口public interface xxxService {}一般情况下我们定义接口的名称遵循xxxService,以Service结尾的类名称代表的就是接口   接口的方法不需要方法体，故不能存在大括号    接口的方法都是public  接口实现类   接口定义的方法在实现类必须全部实现，而且方法名称、参数、返回值必须完全相同 由于接口方法都是public的，所以实现类的方法也必须为publ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="继承">
-<meta property="og:url" content="http://yoursite.com/2020/07/14/%E7%BB%A7%E6%89%BF/index.html">
+<meta property="og:title" content="接口">
+<meta property="og:url" content="http://yoursite.com/2020/07/14/%E6%8E%A5%E5%8F%A3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="继承方法覆盖通过子类对象实例化父类对象时，调用同名方法时会因为同名覆盖的原因执行子类方法 super  子类调用父类同名方法 子类实现父类构造函数  1234567891011public class Animal&amp;#123;    public void eat()&amp;#123;        System.out.println(&quot;This is father&quot;);    &amp;">
+<meta property="og:description" content="接口public interface xxxService {}一般情况下我们定义接口的名称遵循xxxService,以Service结尾的类名称代表的就是接口   接口的方法不需要方法体，故不能存在大括号    接口的方法都是public  接口实现类   接口定义的方法在实现类必须全部实现，而且方法名称、参数、返回值必须完全相同 由于接口方法都是public的，所以实现类的方法也必须为publ">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-14T02:54:34.879Z">
-<meta property="article:modified_time" content="2020-07-14T02:54:48.445Z">
+<meta property="og:image" content="https://style.youkeda.com/img/ham/course/j2/implements.svg">
+<meta property="article:published_time" content="2020-07-14T03:42:21.051Z">
+<meta property="article:modified_time" content="2020-07-14T03:42:37.238Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://style.youkeda.com/img/ham/course/j2/implements.svg">
 
 
 
@@ -119,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/07/14/继承/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/07/14/接口/"/>
 
 
 
 
 
-  <title>继承 | Hexo</title>
+  <title>接口 | Hexo</title>
   
 
 
@@ -232,7 +234,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/%E7%BB%A7%E6%89%BF/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/%E6%8E%A5%E5%8F%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -249,7 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">继承</h1>
+          <h1 class="post-title" itemprop="name headline">接口</h1>
         
 
         <div class="post-meta">
@@ -261,7 +263,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-14T10:54:34+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-14T11:42:21+08:00">
                 2020-07-14
               </time>
             
@@ -299,23 +301,44 @@
       
 
       
-        <h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p><strong>方法覆盖</strong><br>通过子类对象实例化父类对象时，调用同名方法时会因为同名覆盖的原因执行子类方法</p>
-<p><strong>super</strong></p>
-<ul>
-<li>子类调用父类同名方法</li>
-<li>子类实现父类构造函数</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class Animal&#123;</span><br><span class="line">    public void eat()&#123;</span><br><span class="line">        System.out.println(&quot;This is father&quot;);</span><br><span class="line">    &#123;</span><br><span class="line">&#123;</span><br><span class="line">public class Dog extends Animal&#123;</span><br><span class="line">    public void eat()&#123;</span><br><span class="line">        super.eat();         &#x2F;&#x2F;会调用其父类的eat方法</span><br><span class="line">        System.out.println(&quot;This is son&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class File &#123;</span><br><span class="line">    private String filepath;</span><br><span class="line">    public File(String filepath)</span><br><span class="line">    &#123;</span><br><span class="line">        this.filepath&#x3D;filepath;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class JavaFile extends File &#123;</span><br><span class="line">    private String Package;</span><br><span class="line">    public JavaFile(String filepath,String Package)</span><br><span class="line">    &#123;</span><br><span class="line">        super(filepath);            &#x2F;&#x2F;必须写在第一行</span><br><span class="line">        this.Package&#x3D;Package;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p><code>public interface xxxService {}</code><br>一般情况下我们定义接口的名称遵循<code>xxxService</code>,以Service结尾的类名称代表的就是接口</p>
 <blockquote>
 <ul>
-<li>当父类只有一个有参数的构造函数的时候，子类也必须要具备这个构造函数，或者调用 super 方法为父类构造函数提供参数来实现新的构造函数</li>
+<li>接口的方法不需要方法体，故不能存在大括号</li>
 </ul>
 </blockquote>
 <ul>
-<li>构造函数里super方法必须写在第一行</li>
+<li>接口的方法都是public</li>
 </ul>
+<h3 id="接口实现类"><a href="#接口实现类" class="headerlink" title="接口实现类"></a><strong>接口实现类</strong></h3><p><img src="https://style.youkeda.com/img/ham/course/j2/implements.svg" alt=""></p>
+<blockquote>
+<ul>
+<li>接口定义的方法在实现类必须全部实现，而且方法名称、参数、返回值必须完全相同</li>
+<li>由于接口方法都是<code>public</code>的，所以实现类的方法也必须为<code>public</code></li>
+</ul>
+</blockquote>
+<blockquote>
+<p><em>实现类实现多个接口时用<code>,</code>分开即可</em></p>
+</blockquote>
+<h3 id="实例化接口"><a href="#实例化接口" class="headerlink" title="实例化接口"></a><strong>实例化接口</strong></h3><p>接口只是定义，没有具体实现，故<br><code>EchoService echo = new EchoService();</code>是错误的<br>正确的实例化应该结合实现类<br><code>EchoService echo = new EchoServiceImpl();</code></p>
+<h3 id="常用接口"><a href="#常用接口" class="headerlink" title="常用接口"></a><strong>常用接口</strong></h3><h4 id="Map"><a href="#Map" class="headerlink" title="Map"></a><strong><em>Map</em></strong></h4><p>大部分情况使用<code>Hashmap</code>作为<code>Map</code>接口的实现类，故实例化应</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Map;</span><br><span class="line">import java.util.HashMap;</span><br><span class="line"></span><br><span class="line">Map&lt;Integer,String&gt; map &#x3D; new HashMap&lt;&gt;();</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Map遵循key:value形式的集合，key、value可以是任何形式的Java对象</p>
+</blockquote>
+<ul>
+<li><code>map.put(key,value)</code>  对数据的储存</li>
+<li><code>map.get(key)</code>        对value的获取</li>
+<li><code>map.size()</code>          返回集合的大小<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;Integer,String&gt; map &#x3D; new HashMap&lt;&gt;();</span><br><span class="line"></span><br><span class="line">map.put(1,&quot;Monday&quot;);</span><br><span class="line">map.put(2,&quot;Tuesday&quot;);</span><br><span class="line">map.put(3,&quot;Wednesday&quot;);</span><br><span class="line">map.put(4,&quot;Thursday&quot;);</span><br><span class="line">map.put(5,&quot;Friday&quot;);</span><br><span class="line">map.put(6,&quot;Saturday&quot;);</span><br><span class="line">map.put(7,&quot;Sunday&quot;);</span><br><span class="line"></span><br><span class="line">String weekText &#x3D; map.get(3);</span><br><span class="line">System.out.println(weekText);</span><br><span class="line"></span><br><span class="line">int size &#x3D; map.size();</span><br><span class="line">System.out.println(size);</span><br></pre></td></tr></table></figure></li>
+<li>Map的遍历<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for (Map.Entry&lt;Integer,String&gt; entry : map.entrySet())&#123; </span><br><span class="line"></span><br><span class="line">   System.out.println(&quot;Key &#x3D; &quot; + entry.getKey() + </span><br><span class="line">                  &quot;, Value &#x3D; &quot; + entry.getValue());</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="List"><a href="#List" class="headerlink" title="List"></a><strong><em>List</em></strong></h4><p><code>List</code>是<code>ArrayList</code>的接口<code>List&lt;String&gt; strings = new ArrayList&lt;&gt;();</code></p>
+<blockquote>
+<p>简化版遍历方式（<em>不关心数组坐标值</em>）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; strings &#x3D; new ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">for(String str : strings)&#123;</span><br><span class="line">    System.out.println(str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
 
       
     </div>
@@ -340,8 +363,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/07/10/blog/" rel="next" title="blog">
-                <i class="fa fa-chevron-left"></i> blog
+              <a href="/2020/07/14/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="next" title="Java面向对象">
+                <i class="fa fa-chevron-left"></i> Java面向对象
               </a>
             
           </div>
@@ -349,10 +372,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/07/14/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="prev" title="Java面向对象">
-                Java面向对象 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -475,7 +494,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#继承"><span class="nav-number">1.</span> <span class="nav-text">继承</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#接口"><span class="nav-number">1.</span> <span class="nav-text">接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#接口实现类"><span class="nav-number">1.1.</span> <span class="nav-text">接口实现类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例化接口"><span class="nav-number">1.2.</span> <span class="nav-text">实例化接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用接口"><span class="nav-number">1.3.</span> <span class="nav-text">常用接口</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Map"><span class="nav-number">1.3.1.</span> <span class="nav-text">Map</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#List"><span class="nav-number">1.3.2.</span> <span class="nav-text">List</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
