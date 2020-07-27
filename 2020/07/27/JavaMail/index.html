@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="继承方法覆盖通过子类对象实例化父类对象时，调用同名方法时会因为同名覆盖的原因执行子类方法 super  子类调用父类同名方法 子类实现父类构造函数  1234567891011public class Animal&amp;#123;    public void eat()&amp;#123;        System.out.println(&quot;This is father&quot;);    &amp;">
+<meta name="description" content="JavaMail 依赖： 12345&lt;dependency&gt; &lt;groupId&gt;javax.mail&lt;&#x2F;groupId&gt; &lt;artifactId&gt;mail&lt;&#x2F;artifactId&gt; &lt;version&gt;1.4&lt;&#x2F;version&gt;&lt;&#x2F;dependency&gt; 发送邮件代">
 <meta property="og:type" content="article">
-<meta property="og:title" content="继承">
-<meta property="og:url" content="http://yoursite.com/2020/07/14/%E7%BB%A7%E6%89%BF/index.html">
+<meta property="og:title" content="JavaMail">
+<meta property="og:url" content="http://yoursite.com/2020/07/27/JavaMail/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="继承方法覆盖通过子类对象实例化父类对象时，调用同名方法时会因为同名覆盖的原因执行子类方法 super  子类调用父类同名方法 子类实现父类构造函数  1234567891011public class Animal&amp;#123;    public void eat()&amp;#123;        System.out.println(&quot;This is father&quot;);    &amp;">
+<meta property="og:description" content="JavaMail 依赖： 12345&lt;dependency&gt; &lt;groupId&gt;javax.mail&lt;&#x2F;groupId&gt; &lt;artifactId&gt;mail&lt;&#x2F;artifactId&gt; &lt;version&gt;1.4&lt;&#x2F;version&gt;&lt;&#x2F;dependency&gt; 发送邮件代">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-14T02:54:34.879Z">
-<meta property="article:modified_time" content="2020-07-14T02:54:48.445Z">
+<meta property="article:published_time" content="2020-07-27T11:19:34.242Z">
+<meta property="article:modified_time" content="2020-07-27T11:19:41.145Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/07/14/继承/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/07/27/JavaMail/"/>
 
 
 
 
 
-  <title>继承 | Hexo</title>
+  <title>JavaMail | Hexo</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/%E7%BB%A7%E6%89%BF/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/27/JavaMail/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">继承</h1>
+          <h1 class="post-title" itemprop="name headline">JavaMail</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-14T10:54:34+08:00">
-                2020-07-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-27T19:19:34+08:00">
+                2020-07-27
               </time>
             
 
@@ -299,23 +299,12 @@
       
 
       
-        <h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p><strong>方法覆盖</strong><br>通过子类对象实例化父类对象时，调用同名方法时会因为同名覆盖的原因执行子类方法</p>
-<p><strong>super</strong></p>
-<ul>
-<li>子类调用父类同名方法</li>
-<li>子类实现父类构造函数</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class Animal&#123;</span><br><span class="line">    public void eat()&#123;</span><br><span class="line">        System.out.println(&quot;This is father&quot;);</span><br><span class="line">    &#123;</span><br><span class="line">&#123;</span><br><span class="line">public class Dog extends Animal&#123;</span><br><span class="line">    public void eat()&#123;</span><br><span class="line">        super.eat();         &#x2F;&#x2F;会调用其父类的eat方法</span><br><span class="line">        System.out.println(&quot;This is son&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class File &#123;</span><br><span class="line">    private String filepath;</span><br><span class="line">    public File(String filepath)</span><br><span class="line">    &#123;</span><br><span class="line">        this.filepath&#x3D;filepath;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class JavaFile extends File &#123;</span><br><span class="line">    private String Package;</span><br><span class="line">    public JavaFile(String filepath,String Package)</span><br><span class="line">    &#123;</span><br><span class="line">        super(filepath);            &#x2F;&#x2F;必须写在第一行</span><br><span class="line">        this.Package&#x3D;Package;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li>当父类只有一个有参数的构造函数的时候，子类也必须要具备这个构造函数，或者调用 super 方法为父类构造函数提供参数来实现新的构造函数</li>
-</ul>
-</blockquote>
-<ul>
-<li>构造函数里super方法必须写在第一行</li>
-</ul>
+        <h2 id="JavaMail"><a href="#JavaMail" class="headerlink" title="JavaMail"></a>JavaMail</h2><hr>
+<p>依赖：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line"> &lt;groupId&gt;javax.mail&lt;&#x2F;groupId&gt;</span><br><span class="line"> &lt;artifactId&gt;mail&lt;&#x2F;artifactId&gt;</span><br><span class="line"> &lt;version&gt;1.4&lt;&#x2F;version&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+<p>发送邮件代码,属于固定用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">import java.security.Security;</span><br><span class="line">import java.util.Properties;</span><br><span class="line">import javax.mail.Authenticator;</span><br><span class="line">import javax.mail.Message;</span><br><span class="line">import javax.mail.PasswordAuthentication;</span><br><span class="line">import javax.mail.Session;</span><br><span class="line">import javax.mail.Transport;</span><br><span class="line">import javax.mail.internet.InternetAddress;</span><br><span class="line">import javax.mail.internet.MimeMessage;</span><br><span class="line">import com.sun.net.ssl.internal.ssl.Provider;</span><br><span class="line"></span><br><span class="line">public class MailClient &#123;</span><br><span class="line">  public static void main(String[] args) &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">      &#x2F;&#x2F;设置SSL连接、邮件环境</span><br><span class="line">      Security.addProvider(new Provider());</span><br><span class="line">      final String SSL_FACTORY &#x3D; &quot;javax.net.ssl.SSLSocketFactory&quot;;</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F;配置邮箱信息</span><br><span class="line">      Properties props &#x3D; System.getProperties();</span><br><span class="line">      &#x2F;&#x2F;邮件服务器</span><br><span class="line">      props.setProperty(&quot;mail.smtp.host&quot;, &quot;smtp.qq.com&quot;);</span><br><span class="line">      props.setProperty(&quot;mail.smtp.socketFactory.class&quot;, SSL_FACTORY);</span><br><span class="line">      props.setProperty(&quot;mail.smtp.socketFactory.fallback&quot;, &quot;false&quot;);</span><br><span class="line">      &#x2F;&#x2F;邮件服务器端口</span><br><span class="line">      props.setProperty(&quot;mail.smtp.port&quot;, &quot;465&quot;);</span><br><span class="line">      props.setProperty(&quot;mail.smtp.socketFactory.port&quot;, &quot;465&quot;);</span><br><span class="line">      &#x2F;&#x2F;鉴权信息</span><br><span class="line">      props.setProperty(&quot;mail.smtp.auth&quot;, &quot;true&quot;);</span><br><span class="line">      &#x2F;&#x2F;建立邮件会话</span><br><span class="line">      Session session &#x3D; Session.getDefaultInstance(props, new Authenticator() &#123;</span><br><span class="line">        &#x2F;&#x2F;身份认证</span><br><span class="line">        protected PasswordAuthentication getPasswordAuthentication() &#123;</span><br><span class="line">          &#x2F;&#x2F;1.账户 授权码</span><br><span class="line">          return new PasswordAuthentication(&quot;xxxxxxx@qq.com&quot;, &quot;xxxx&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      &#x2F;&#x2F;建立邮件对象</span><br><span class="line">      MimeMessage message &#x3D; new MimeMessage(session);</span><br><span class="line">      &#x2F;&#x2F;设置邮件的发件人</span><br><span class="line">      message.setFrom(new InternetAddress(&quot;xxxxxxx@qq.com&quot;));</span><br><span class="line">      &#x2F;&#x2F;2.设置邮件的收件人</span><br><span class="line">      message.setRecipients(Message.RecipientType.TO, &quot;xxxxxxx@qq.com&quot;);</span><br><span class="line">      &#x2F;&#x2F;设置邮件的主题</span><br><span class="line">      message.setSubject(&quot;通过javamail发出！！！&quot;);</span><br><span class="line">      &#x2F;&#x2F;文本部分</span><br><span class="line">      message.setContent(&quot;文本邮件测试&quot;, &quot;text&#x2F;html;charset&#x3D;UTF-8&quot;);</span><br><span class="line">      message.saveChanges();</span><br><span class="line">      &#x2F;&#x2F;发送邮件</span><br><span class="line">      Transport.send(message);</span><br><span class="line">    &#125; catch (Exception e) &#123;</span><br><span class="line">      e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
 
       
     </div>
@@ -340,8 +329,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/07/10/blog/" rel="next" title="blog">
-                <i class="fa fa-chevron-left"></i> blog
+              <a href="/2020/07/26/Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" rel="next" title="Java网络编程">
+                <i class="fa fa-chevron-left"></i> Java网络编程
               </a>
             
           </div>
@@ -349,10 +338,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/07/14/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="prev" title="Java面向对象">
-                Java面向对象 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -475,7 +460,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#继承"><span class="nav-number">1.</span> <span class="nav-text">继承</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaMail"><span class="nav-number">1.</span> <span class="nav-text">JavaMail</span></a></li></ol></div>
             
 
           </div>
