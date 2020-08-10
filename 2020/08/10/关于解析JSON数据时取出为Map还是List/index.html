@@ -79,23 +79,19 @@
 
 
 
-<meta name="description" content="Java面向对象 主键即主关键字，是被挑选出来作为表的行的唯一标识的候选关键字，他可以唯一确定表中的一行数据。         类的ID主键  ID主键用于表示全局唯一的记录,我们使用一个单独的属性（变量）来表示唯一对应的一条数据，这个属性大多数情况下命名为id   实例变量：类的成员变量  UML类图访问控制符   privite为红色正方形图标  public为绿色圆形图标     prote">
+<meta name="description" content="关于解析JSON数据时取出为Map还是List">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java面向对象">
-<meta property="og:url" content="http://yoursite.com/2020/07/14/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/index.html">
+<meta property="og:title" content="关于解析JSON数据时取出为Map还是List">
+<meta property="og:url" content="http://yoursite.com/2020/08/10/%E5%85%B3%E4%BA%8E%E8%A7%A3%E6%9E%90JSON%E6%95%B0%E6%8D%AE%E6%97%B6%E5%8F%96%E5%87%BA%E4%B8%BAMap%E8%BF%98%E6%98%AFList/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Java面向对象 主键即主关键字，是被挑选出来作为表的行的唯一标识的候选关键字，他可以唯一确定表中的一行数据。         类的ID主键  ID主键用于表示全局唯一的记录,我们使用一个单独的属性（变量）来表示唯一对应的一条数据，这个属性大多数情况下命名为id   实例变量：类的成员变量  UML类图访问控制符   privite为红色正方形图标  public为绿色圆形图标     prote">
+<meta property="og:description" content="关于解析JSON数据时取出为Map还是List">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://style.youkeda.com/img/ham/course/j2/user1.svg">
-<meta property="og:image" content="https://style.youkeda.com/img/ham/course/j2/private-field.png">
-<meta property="og:image" content="https://style.youkeda.com/img/ham/course/j2/public-method.png">
-<meta property="og:image" content="https://style.youkeda.com/img/ham/course/j2/protected-field.png">
-<meta property="og:image" content="https://style.youkeda.com/img/ham/course/j2/userservice1.svg">
-<meta property="article:published_time" content="2020-07-14T02:54:58.124Z">
-<meta property="article:modified_time" content="2020-07-14T02:55:00.496Z">
+<meta property="og:image" content="https://i.loli.net/2020/08/10/vcFQiuWOTsZ7UVR.png">
+<meta property="article:published_time" content="2020-08-10T04:06:13.718Z">
+<meta property="article:modified_time" content="2020-08-10T04:06:17.214Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://style.youkeda.com/img/ham/course/j2/user1.svg">
+<meta name="twitter:image" content="https://i.loli.net/2020/08/10/vcFQiuWOTsZ7UVR.png">
 
 
 
@@ -125,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/07/14/Java面向对象/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/08/10/关于解析JSON数据时取出为Map还是List/"/>
 
 
 
 
 
-  <title>Java面向对象 | Hexo</title>
+  <title>关于解析JSON数据时取出为Map还是List | Hexo</title>
   
 
 
@@ -238,7 +234,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/10/%E5%85%B3%E4%BA%8E%E8%A7%A3%E6%9E%90JSON%E6%95%B0%E6%8D%AE%E6%97%B6%E5%8F%96%E5%87%BA%E4%B8%BAMap%E8%BF%98%E6%98%AFList/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -255,7 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java面向对象</h1>
+          <h1 class="post-title" itemprop="name headline">关于解析JSON数据时取出为Map还是List</h1>
         
 
         <div class="post-meta">
@@ -267,8 +263,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-14T10:54:58+08:00">
-                2020-07-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-10T12:06:13+08:00">
+                2020-08-10
               </time>
             
 
@@ -305,39 +301,8 @@
       
 
       
-        <h1 id="Java面向对象"><a href="#Java面向对象" class="headerlink" title="Java面向对象"></a>Java面向对象</h1><hr>
-<p><strong>主键</strong><br><em>即主关键字，是被挑选出来作为表的行的唯一标识的候选关键字，他可以唯一确定表中的一行数据。</em>        </p>
-<p>类的ID主键</p>
-<blockquote>
-<p>ID主键用于表示全局唯一的记录,我们使用一个单独的属性（变量）来表示唯一对应的一条数据，这个属性大多数情况下命名为<code>id</code></p>
-</blockquote>
-<hr>
-<p><strong>实例变量</strong>：<em>类的成员变量</em></p>
-<hr>
-<h4 id="UML类图"><a href="#UML类图" class="headerlink" title="UML类图"></a><strong>UML类图</strong></h4><h6 id="访问控制符"><a href="#访问控制符" class="headerlink" title="访问控制符"></a>访问控制符</h6><p><img src="https://style.youkeda.com/img/ham/course/j2/user1.svg" alt="UML示例"></p>
-<blockquote>
-<ul>
-<li>privite为红色正方形图标 <img src="https://style.youkeda.com/img/ham/course/j2/private-field.png" alt=""></li>
-<li>public为绿色圆形图标    <img src="https://style.youkeda.com/img/ham/course/j2/public-method.png" alt=""></li>
-<li>protect为黄色菱形图标  <img src="https://style.youkeda.com/img/ham/course/j2/protected-field.png" alt=""></li>
-</ul>
-<p><em>ps:颜色不是最重要的，不同UML软件可能不同，图形才是最重要的</em></p>
-</blockquote>
-<hr>
-<h4 id="常量-即静态变量"><a href="#常量-即静态变量" class="headerlink" title="常量 即静态变量"></a><strong>常量</strong> <em>即静态变量</em></h4><p><code>public static ...</code><br>使用场景：</p>
-<ol>
-<li>常用的字符串值</li>
-<li>需要在内存中做缓存的值<blockquote>
-<p>命名规则：为了和变量区分开，一般情况下常量的变量名采用全部大写的字母来命名，单词之间用<code>_</code>分割</p>
-</blockquote>
-</li>
-</ol>
-<p><strong>static声明静态代码块</strong><br><em>可在其中执行代码并且调用静态变量（初始化静态变量）</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class SchoolService&#123;</span><br><span class="line">  &#x2F;&#x2F; 学校数据的常量</span><br><span class="line">  public static ArrayList&lt;School&gt; SCHOOLS &#x3D; new ArrayList&lt;&gt;();  </span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; 声明一个静态代码块，用于初始化学校数据</span><br><span class="line">  static&#123;</span><br><span class="line">    School school &#x3D; new School();</span><br><span class="line">    school.setId(&quot;1&quot;);</span><br><span class="line">    school.setName(&quot;北京大学&quot;);</span><br><span class="line">    SCHOOLS.add(school);</span><br><span class="line"></span><br><span class="line">    school &#x3D; new School();</span><br><span class="line">    school.setId(&quot;2&quot;);</span><br><span class="line">    school.setName(&quot;清华大学&quot;);</span><br><span class="line">    SCHOOLS.add(school);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>static的执行顺序是按照代码行数的顺序来执行的，所以要先声明static变量后再创建static代码块</p>
-</blockquote>
-<p>在UML图中常量表示为带下划线<br><img src="https://style.youkeda.com/img/ham/course/j2/userservice1.svg" alt="常量"></p>
+        <h1 id="关于解析JSON数据时取出为Map还是List"><a href="#关于解析JSON数据时取出为Map还是List" class="headerlink" title="关于解析JSON数据时取出为Map还是List"></a>关于解析JSON数据时取出为Map还是List</h1><hr>
+<p><img src="https://i.loli.net/2020/08/10/vcFQiuWOTsZ7UVR.png" alt=""></p>
 
       
     </div>
@@ -362,8 +327,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/07/14/%E7%BB%A7%E6%89%BF/" rel="next" title="继承">
-                <i class="fa fa-chevron-left"></i> 继承
+              <a href="/2020/08/10/Java%E4%B8%ADsize(),length,length()%E7%9A%84%E5%8C%BA%E5%88%AB/" rel="next" title="Java中size(),length,length()的区别">
+                <i class="fa fa-chevron-left"></i> Java中size(),length,length()的区别
               </a>
             
           </div>
@@ -371,10 +336,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/07/14/%E6%8E%A5%E5%8F%A3/" rel="prev" title="接口">
-                接口 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -497,7 +458,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java面向对象"><span class="nav-number">1.</span> <span class="nav-text">Java面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#UML类图"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">UML类图</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#访问控制符"><span class="nav-number">1.0.0.1.0.1.</span> <span class="nav-text">访问控制符</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常量-即静态变量"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">常量 即静态变量</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于解析JSON数据时取出为Map还是List"><span class="nav-number">1.</span> <span class="nav-text">关于解析JSON数据时取出为Map还是List</span></a></li></ol></div>
             
 
           </div>
